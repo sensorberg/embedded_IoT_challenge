@@ -11,10 +11,22 @@ As a challenge, you are required to develop an IoT-based lock control system. Th
 
 A prepared Dockerfile is included in the repository, containing ESP-IDF and configured to run a QEMU simulation of the ESP32 application. While using this setup is recommended, it is not mandatory. If you prefer not to use Docker, you can run the QEMU simulation locally on your system or use a physical ESP32 device if available.
 
+In case you decided to continue with docker setup, run the following commands to make sure you have no problem with running the application. Alothugh it is tested and you should be able to see `Hello world` logs from the QEMU setup.
+```
+docker build -t esp32-qemu .
+docker run --rm -it -v "$PWD":/project esp32-qemu
+```
+
+
 If you decided to change the environment:
 - Install ESP-IDF. The configuration is based on `v5.4` but you can work also with newer versions.
 - Ensure you have deleted the `/build` folder if it already exists.
-- Adjust the configuration in `sdkconfig` to match your setup.
+- Adjust the configuration in `sdkconfig` to match your setup. 
+  
+  Run:
+  ```
+  idf.py menuconfig
+  ```
 
 Regardless of your chosen environment, please include detailed steps for running your code in your documentation.
 
@@ -42,4 +54,4 @@ In this challenge, you should implement the following:
 
 ## Submission Guidelines
 
-Please submit your completed code, documentation, and the chosen case study answer. Ensure all steps for running your code are clearly documented. Contact [your contact info] for any questions.
+Please submit your completed code, documentation, and the chosen case study answer. Ensure all steps for running your code are clearly documented. Contact `hossein.mousavizadeh@sensorberg.com` for any questions.
