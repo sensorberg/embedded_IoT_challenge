@@ -9,9 +9,9 @@ As a challenge, you are required to develop an IoT-based lock control system. Th
 
 ## Environment Setup
 
-A prepared Dockerfile is included in the repository, containing ESP-IDF and configured to run a QEMU simulation of the ESP32 application. While using this setup is recommended, it is not mandatory. If you prefer not to use Docker, you can run the QEMU simulation locally on your system or use a physical ESP32 device if available.
+A prepared Dockerfile is included in the repository, containing ESP-IDF and configured to run a QEMU simulation of the ESP32 application (note that building the image will download few gigabytes of data). While using this setup is recommended, it is not mandatory. If you prefer not to use Docker, you can run the QEMU simulation locally on your system or use a physical ESP32 device if available.
 
-In case you decided to continue with docker setup, run the following commands to make sure you have no problem with running the application. Alothugh it is tested and you should be able to see `Hello world` logs from the QEMU setup.
+In case you decide to continue with the Docker setup, run the following commands to ensure you have no problem with running the application. You should be able to see `Hello world` logs from the QEMU setup. However the setup is completly tested and everything should be fine.
 ```
 docker build -t esp32-qemu .
 docker run --rm -it -v "$PWD":/project esp32-qemu
@@ -19,9 +19,9 @@ docker run --rm -it -v "$PWD":/project esp32-qemu
 
 
 If you decided to change the environment:
-- Install ESP-IDF. The configuration is based on `v5.4` but you can work also with newer versions.
+- Install ESP-IDF. The configuration is based on `v5.4`, but you can also work with newer versions.
 - Ensure you have deleted the `/build` folder if it already exists.
-- Adjust the configuration in `sdkconfig` to match your setup. 
+- Adjust the configuration in `sdkconfig` to match your setup.
   
   Run:
   ```
@@ -29,6 +29,11 @@ If you decided to change the environment:
   ```
 
 Regardless of your chosen environment, please include detailed steps for running your code in your documentation.
+
+### Useful sources
+- https://docs.espressif.com/projects/esp-idf/en/stable/esp32/get-started/index.html
+- https://docs.espressif.com/projects/esp-idf/en/stable/esp32/api-guides/tools/qemu.html
+- https://docs.espressif.com/projects/esp-idf/en/stable/esp32/api-guides/tools/idf-py.html
 
 ## Implementation Requirements
 
@@ -44,7 +49,7 @@ In this challenge, you should implement the following:
 9. Choose one of the two case studies below and provide your answer in a separate document.
 10. (Optional) Prepare a minimal simulated server to test the system.
 
-**Hint:** Do not focus excessively on minor details or full completion. What matters most is the style, organization, and documentation of your code, as well as your approach to problem-solving.
+**Hint:** Do not focus excessively on minor details or complete implementation. What matters most is the style, organization, and documentation of your code, as well as your approach to problem-solving.
 
 ## Case Studies
 
