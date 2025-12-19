@@ -59,4 +59,4 @@ In this challenge, you should implement the following:
 
 ## Submission Guidelines
 
-Please submit your completed code, documentation, and the chosen case study answer. Ensure all steps for running your code are clearly documented. Contact `hossein.mousavizadeh@sensorberg.com` for any questions.
+Please submit your completed code, documentation, and the chosen case study answer. Ensure all steps for running your code are clearly documented. Contact `jobs@sensorberg.com` for any questions.
